@@ -353,9 +353,9 @@ export default function Home() {
           <Logo />
           <div>© {new Date().getFullYear()} Lylu. All rights reserved.</div>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-white">Privacy</a>
-            <a href="#" className="hover:text-white">Terms</a>
-            <a href="mailto:hello@lylu.io" className="hover:text-white">Contact</a>
+            <a href="/privacy" className="hover:text-white">Privacy</a>
+            <a href="/terms" className="hover:text-white">Terms</a>
+            <a href="mailto:hello@aiworkspacelab.com" className="hover:text-white">Contact</a>
           </div>
         </div>
       </footer>
