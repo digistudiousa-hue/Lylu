@@ -1,5 +1,8 @@
 import Logo from "@/components/Logo";
 import DashboardMock from "@/components/DashboardMock";
+import PricingButton from "@/components/PricingButton";
+
+type PlanKey = "free" | "starter" | "launch" | "pro";
 
 const packages = [
   {
@@ -24,11 +27,18 @@ const packages = [
   },
 ];
 
-const plans = [
-  { name: "Free trial", price: "$0", leads: "10 leads", cta: "Start free", featured: false },
-  { name: "Starter", price: "$35", leads: "350 leads / mo", cta: "Get Starter", featured: false },
-  { name: "Launch", price: "$97", leads: "1,000 leads / mo", cta: "Get Launch", featured: true },
-  { name: "Pro", price: "$247", leads: "2,500 leads / mo", cta: "Get Pro", featured: false },
+const plans: {
+  key: PlanKey;
+  name: string;
+  price: string;
+  leads: string;
+  cta: string;
+  featured: boolean;
+}[] = [
+  { key: "free", name: "Free trial", price: "$0", leads: "10 leads", cta: "Start free", featured: false },
+  { key: "starter", name: "Starter", price: "$35", leads: "350 leads / mo", cta: "Get Starter", featured: false },
+  { key: "launch", name: "Launch", price: "$97", leads: "1,000 leads / mo", cta: "Get Launch", featured: true },
+  { key: "pro", name: "Pro", price: "$247", leads: "2,500 leads / mo", cta: "Get Pro", featured: false },
 ];
 
 const faqs = [
@@ -290,15 +300,7 @@ export default function Home() {
                 <li>✓ CSV export</li>
                 <li>✓ Cancel anytime</li>
               </ul>
-              <button
-                className={`mt-6 w-full rounded-lg py-2.5 text-sm font-semibold ${
-                  p.featured
-                    ? "bg-accent text-white hover:bg-accent2"
-                    : "border border-border bg-panel text-white hover:border-accent"
-                }`}
-              >
-                {p.cta}
-              </button>
+              <PricingButton plan={p.key} label={p.cta} featured={p.featured} />
             </div>
           ))}
         </div>
