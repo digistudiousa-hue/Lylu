@@ -85,7 +85,7 @@ export default function Home() {
           <a href="#faq" className="hover:text-white">FAQ</a>
         </div>
         <a
-          href="https://saas-1-0.vercel.app/dashboard/leads_v2"
+          href="https://app.aiworkspacelab.com/sign-in"
           className="rounded-lg border border-border bg-panel px-3.5 py-1.5 text-sm text-white hover:border-accent"
         >
           Sign in
@@ -110,7 +110,7 @@ export default function Home() {
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            href="https://saas-1-0.vercel.app/dashboard/leads_v2"
+            href="https://app.aiworkspacelab.com/sign-up"
             className="rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/30 hover:bg-accent2"
           >
             Try free — 10 leads on us
@@ -339,7 +339,7 @@ export default function Home() {
             10 free leads, no card. Find your first 50 prospects in the next 5 minutes.
           </p>
           <a
-            href="https://saas-1-0.vercel.app/dashboard/leads_v2"
+            href="https://app.aiworkspacelab.com/sign-up"
             className="mt-7 inline-block rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/30 hover:bg-accent2"
           >
             Try Lylu free

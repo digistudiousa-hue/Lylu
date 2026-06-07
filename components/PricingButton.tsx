@@ -19,7 +19,7 @@ export default function PricingButton({ plan, label, featured }: Props) {
       window.location.href =
         process.env.NEXT_PUBLIC_APP_URL
           ? `${process.env.NEXT_PUBLIC_APP_URL}/sign-up`
-          : "https://saas-1-0.vercel.app/sign-up";
+          : "https://app.aiworkspacelab.com/sign-up";
       return;
     }
 
