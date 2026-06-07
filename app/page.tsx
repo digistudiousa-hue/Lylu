@@ -1,8 +1,7 @@
-import Logo from "@/components/Logo";
 import DashboardMock from "@/components/DashboardMock";
-import PricingButton from "@/components/PricingButton";
-
-type PlanKey = "free" | "starter" | "launch" | "pro";
+import PricingGrid from "@/components/PricingGrid";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const packages = [
   {
@@ -25,20 +24,6 @@ const packages = [
     desc: "Done-for-you outreach across 1,000+ prospect campaigns.",
     status: "Soon",
   },
-];
-
-const plans: {
-  key: PlanKey;
-  name: string;
-  price: string;
-  leads: string;
-  cta: string;
-  featured: boolean;
-}[] = [
-  { key: "free", name: "Free trial", price: "$0", leads: "10 leads", cta: "Start free", featured: false },
-  { key: "starter", name: "Starter", price: "$35", leads: "350 leads / mo", cta: "Get Starter", featured: false },
-  { key: "launch", name: "Launch", price: "$97", leads: "1,000 leads / mo", cta: "Get Launch", featured: true },
-  { key: "pro", name: "Pro", price: "$247", leads: "2,500 leads / mo", cta: "Get Pro", featured: false },
 ];
 
 const faqs = [
@@ -71,28 +56,11 @@ const faqs = [
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      {/* Background */}
       <div className="pointer-events-none absolute inset-0 grid-bg" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[600px] bg-grid-fade" />
 
-      {/* Nav */}
-      <nav className="relative z-10 mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <Logo />
-        <div className="hidden gap-8 text-sm text-muted md:flex">
-          <a href="#product" className="hover:text-white">Product</a>
-          <a href="#roadmap" className="hover:text-white">Roadmap</a>
-          <a href="#pricing" className="hover:text-white">Pricing</a>
-          <a href="#faq" className="hover:text-white">FAQ</a>
-        </div>
-        <a
-          href="https://app.aiworkspacelab.com/sign-in"
-          className="rounded-lg border border-border bg-panel px-3.5 py-1.5 text-sm text-white hover:border-accent"
-        >
-          Sign in
-        </a>
-      </nav>
+      <Nav />
 
-      {/* Hero */}
       <section className="relative z-10 mx-auto max-w-6xl px-6 pt-16 pb-24 text-center">
         <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-panel/60 px-3 py-1 text-xs text-muted">
           <span className="h-1.5 w-1.5 rounded-full bg-accent2" />
@@ -124,13 +92,11 @@ export default function Home() {
         </div>
         <p className="mt-3 text-xs text-muted">No credit card. Cancel anytime.</p>
 
-        {/* Dashboard mock */}
         <div className="mt-16">
           <DashboardMock />
         </div>
       </section>
 
-      {/* Proof bar */}
       <section className="relative z-10 border-y border-border bg-panel/30">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-6 py-8 md:grid-cols-4">
           {[
@@ -147,7 +113,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Problem */}
       <section className="relative z-10 mx-auto max-w-4xl px-6 py-24 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
           The lead-gen stack is broken.
@@ -171,7 +136,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Product */}
       <section id="product" className="relative z-10 mx-auto max-w-6xl px-6 py-24">
         <div className="text-center">
           <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
@@ -199,7 +163,6 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Video placeholder */}
         <div className="mt-12 mx-auto aspect-video max-w-4xl rounded-2xl border border-border bg-panel/60 grid place-items-center text-muted">
           <div className="text-center">
             <div className="mx-auto mb-3 h-14 w-14 rounded-full bg-accent/20 grid place-items-center">
@@ -210,7 +173,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Roadmap */}
       <section id="roadmap" className="relative z-10 mx-auto max-w-6xl px-6 py-24">
         <div className="text-center">
           <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
@@ -259,7 +221,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing */}
       <section id="pricing" className="relative z-10 mx-auto max-w-6xl px-6 py-24">
         <div className="text-center">
           <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
@@ -272,41 +233,11 @@ export default function Home() {
             One credit = $0.01. One lead = 10 credits. Cancel anytime.
           </p>
         </div>
-
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {plans.map((p) => (
-            <div
-              key={p.name}
-              className={`relative rounded-2xl border p-6 ${
-                p.featured
-                  ? "border-accent bg-gradient-to-b from-accent/10 to-transparent glow"
-                  : "border-border bg-panel/60"
-              }`}
-            >
-              {p.featured && (
-                <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-accent px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white">
-                  Most popular
-                </div>
-              )}
-              <div className="text-sm text-muted">{p.name}</div>
-              <div className="mt-3 flex items-baseline gap-1">
-                <span className="text-4xl font-bold text-white">{p.price}</span>
-                {p.price !== "$0" && <span className="text-sm text-muted">/mo</span>}
-              </div>
-              <div className="mt-1 text-sm text-accent2">{p.leads}</div>
-              <ul className="mt-5 space-y-2 text-sm text-muted">
-                <li>✓ Full Business Hub access</li>
-                <li>✓ All filters & signals</li>
-                <li>✓ CSV export</li>
-                <li>✓ Cancel anytime</li>
-              </ul>
-              <PricingButton plan={p.key} label={p.cta} featured={p.featured} />
-            </div>
-          ))}
+        <div className="mt-12">
+          <PricingGrid />
         </div>
       </section>
 
-      {/* FAQ */}
       <section id="faq" className="relative z-10 mx-auto max-w-3xl px-6 py-24">
         <div className="text-center">
           <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
@@ -329,7 +260,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA */}
       <section className="relative z-10 mx-auto max-w-4xl px-6 py-24">
         <div className="rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/15 via-panel to-bg p-10 text-center glow">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -347,18 +277,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="relative z-10 border-t border-border">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-xs text-muted md:flex-row">
-          <Logo />
-          <div>© {new Date().getFullYear()} Lylu. All rights reserved.</div>
-          <div className="flex gap-5">
-            <a href="/privacy" className="hover:text-white">Privacy</a>
-            <a href="/terms" className="hover:text-white">Terms</a>
-            <a href="mailto:hello@aiworkspacelab.com" className="hover:text-white">Contact</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
