@@ -31,7 +31,7 @@ export default function ForAgenciesPage() {
             href="https://app.aiworkspacelab.com/sign-up"
             className="rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/30 hover:bg-accent2"
           >
-            Try free — 10 leads on us
+            Start free — 50 leads on us
           </a>
           <a
             href="#how"
@@ -129,7 +129,7 @@ export default function ForAgenciesPage() {
             Built for the agencies. Priced for the operators.
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted">
-            Pull your first 100 leads in the next 5 minutes. No card.
+            Pull your first 50 leads in the next 5 minutes. No card.
           </p>
           <a
             href="https://app.aiworkspacelab.com/sign-up"

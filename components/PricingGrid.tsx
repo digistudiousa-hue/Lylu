@@ -10,7 +10,7 @@ const plans: {
   cta: string;
   featured: boolean;
 }[] = [
-  { key: "free", name: "Free trial", price: "$0", leads: "10 leads", cta: "Start free", featured: false },
+  { key: "free", name: "Free trial", price: "$0", leads: "50 leads", cta: "Start free", featured: false },
   { key: "starter", name: "Starter", price: "$35", leads: "350 leads / mo", cta: "Get Starter", featured: false },
   { key: "launch", name: "Launch", price: "$97", leads: "1,000 leads / mo", cta: "Get Launch", featured: true },
   { key: "pro", name: "Pro", price: "$247", leads: "2,500 leads / mo", cta: "Get Pro", featured: false },

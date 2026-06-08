@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Stories from "@/components/Stories";
 import BuiltOn from "@/components/BuiltOn";
 import Verticals from "@/components/Verticals";
+import Comparison from "@/components/Comparison";
 
 const packages = [
   {
@@ -56,6 +57,12 @@ const faqs = [
   },
 ];
 
+const steps = [
+  { n: "01", t: "Search", d: "Type a vertical and a city. Plumbers in Dallas. Dentists in Miami." },
+  { n: "02", t: "Filter", d: "Has phone, 4.5★+, top prospects. Drop the dead weight in one click." },
+  { n: "03", t: "Export", d: "CSV straight into Instantly, Smartlead, or HubSpot. Pitch today." },
+];
+
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
@@ -64,33 +71,35 @@ export default function Home() {
 
       <Nav />
 
+      {/* HERO — agency-targeted */}
       <section className="relative z-10 mx-auto max-w-6xl px-6 pt-16 pb-24 text-center">
         <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-panel/60 px-3 py-1 text-xs text-muted">
           <span className="h-1.5 w-1.5 rounded-full bg-accent2" />
-          Every business on Google Maps — one search away
+          Built for agencies &amp; outbound operators
         </div>
-        <h1 className="mx-auto max-w-3xl text-balance text-5xl font-bold tracking-tight text-white sm:text-6xl">
-          Local business leads,{" "}
+        <h1 className="mx-auto max-w-4xl text-balance text-5xl font-bold tracking-tight text-white sm:text-6xl">
+          Source local leads for every client,{" "}
           <span className="bg-gradient-to-r from-accent2 to-accent bg-clip-text text-transparent">
             in seconds.
           </span>
         </h1>
-        <p className="mx-auto mt-5 max-w-xl text-pretty text-lg text-muted">
-          Search any industry in any city. Get ratings, phone, website, and
-          socials — clean enough to pitch from. Built for agencies who run outbound at scale.
+        <p className="mx-auto mt-5 max-w-2xl text-pretty text-lg text-muted">
+          Lylu turns any business on Google Maps into an export-ready lead —
+          phone, ratings, and socials included. Fill client pipelines without
+          Apollo prices or a scraping VA.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href="https://app.aiworkspacelab.com/sign-up"
             className="rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/30 hover:bg-accent2"
           >
-            Try free — 10 leads on us
+            Start free — 50 leads on us
           </a>
           <a
-            href="#product"
+            href="#how-it-works"
             className="rounded-lg border border-border bg-panel/60 px-5 py-3 text-sm font-semibold text-white hover:border-accent"
           >
-            See it in action
+            See how it works
           </a>
         </div>
         <p className="mt-3 text-xs text-muted">No credit card. Cancel anytime.</p>
@@ -100,6 +109,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* STATS STRIP */}
       <section className="relative z-10 border-y border-border bg-panel/30">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-6 py-8 md:grid-cols-4">
           {[
@@ -116,13 +126,8 @@ export default function Home() {
         </div>
       </section>
 
-      <BuiltOn />
-
-      <Stories />
-
-      <Verticals />
-
-      <section className="relative z-10 mx-auto max-w-4xl px-6 py-24 text-center">
+      {/* PROBLEM */}
+      <section className="reveal relative z-10 mx-auto max-w-4xl px-6 py-24 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
           The lead-gen stack is broken.
         </h2>
@@ -145,7 +150,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="product" className="relative z-10 mx-auto max-w-6xl px-6 py-24">
+      {/* SOLUTION / PRODUCT */}
+      <section id="product" className="reveal relative z-10 mx-auto max-w-6xl px-6 py-24">
         <div className="text-center">
           <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
             Product
@@ -155,7 +161,7 @@ export default function Home() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted">
             Type a business type and a city. Get a clean, filterable list of
-            real companies — with the signals that tell you who's worth a cold call.
+            real companies — with the signals that tell you who&apos;s worth a cold call.
           </p>
         </div>
 
@@ -172,17 +178,41 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-12 mx-auto aspect-video max-w-4xl rounded-2xl border border-border bg-panel/60 grid place-items-center text-muted">
-          <div className="text-center">
-            <div className="mx-auto mb-3 h-14 w-14 rounded-full bg-accent/20 grid place-items-center">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div className="text-sm">Product walkthrough — coming soon</div>
+        {/* How it works — 3-step flow (replaces the empty placeholder) */}
+        <div id="how-it-works" className="mt-12 rounded-2xl border border-border bg-panel/40 p-8">
+          <div className="grid gap-6 md:grid-cols-3">
+            {steps.map((s, i) => (
+              <div key={s.n} className="relative">
+                <div className="flex items-center gap-3">
+                  <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent/15 text-sm font-bold text-accent2">
+                    {s.n}
+                  </span>
+                  <span className="text-white font-semibold">{s.t}</span>
+                </div>
+                <p className="mt-3 text-sm text-muted">{s.d}</p>
+                {i < steps.length - 1 && (
+                  <div className="absolute right-0 top-4 hidden text-muted md:block">→</div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section id="roadmap" className="relative z-10 mx-auto max-w-6xl px-6 py-24">
+      {/* DIFFERENTIATION */}
+      <Comparison />
+
+      {/* PROOF — Stories */}
+      <Stories />
+
+      {/* BREADTH — Verticals */}
+      <Verticals />
+
+      {/* TRUST — Built on */}
+      <BuiltOn />
+
+      {/* ROADMAP */}
+      <section id="roadmap" className="reveal relative z-10 mx-auto max-w-6xl px-6 py-24">
         <div className="text-center">
           <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
             Roadmap
@@ -230,7 +260,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="relative z-10 mx-auto max-w-6xl px-6 py-24">
+      {/* PRICING */}
+      <section id="pricing" className="reveal relative z-10 mx-auto max-w-6xl px-6 py-24">
         <div className="text-center">
           <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
             Pricing
@@ -247,7 +278,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="faq" className="relative z-10 mx-auto max-w-3xl px-6 py-24">
+      {/* FAQ */}
+      <section id="faq" className="reveal relative z-10 mx-auto max-w-3xl px-6 py-24">
         <div className="text-center">
           <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
             FAQ
@@ -269,19 +301,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative z-10 mx-auto max-w-4xl px-6 py-24">
+      {/* FINAL CTA */}
+      <section className="reveal relative z-10 mx-auto max-w-4xl px-6 py-24">
         <div className="rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/15 via-panel to-bg p-10 text-center glow">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Stop scraping. Start pitching.
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted">
-            10 free leads, no card. Find your first 50 prospects in the next 5 minutes.
+            50 free leads, no card. Pull your first client list in the next 5 minutes.
           </p>
           <a
             href="https://app.aiworkspacelab.com/sign-up"
             className="mt-7 inline-block rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/30 hover:bg-accent2"
           >
-            Try Lylu free
+            Start free
           </a>
         </div>
       </section>

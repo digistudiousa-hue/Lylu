@@ -2,15 +2,24 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Lylu — Local business leads in seconds",
+  metadataBase: new URL("https://aiworkspacelab.com"),
+  title: "Lylu — Source local leads for every client, in seconds",
   description:
-    "The cleanest way to find local businesses worth pitching. Search any industry in any city. Get ratings, phone, website, and socials. Built for agencies.",
+    "Turn any business on Google Maps into an export-ready lead — phone, ratings, and socials included. $0.10 a lead. Built for agencies and outbound operators.",
   icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: "Lylu — Local business leads in seconds",
+    title: "Lylu — Source local leads for every client, in seconds",
     description:
-      "Search any industry in any city. Ratings, phone, website, socials. $0.10 per lead. Built for agencies.",
+      "Every business on Google Maps, export-ready. Phone, ratings, socials. $0.10 a lead. Built for agencies.",
+    url: "https://aiworkspacelab.com",
+    siteName: "Lylu",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lylu — Source local leads for every client, in seconds",
+    description:
+      "Every business on Google Maps, export-ready. $0.10 a lead. Built for agencies.",
   },
 };
 
