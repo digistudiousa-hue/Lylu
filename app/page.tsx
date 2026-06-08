@@ -2,6 +2,9 @@ import DashboardMock from "@/components/DashboardMock";
 import PricingGrid from "@/components/PricingGrid";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import Stories from "@/components/Stories";
+import BuiltOn from "@/components/BuiltOn";
+import Verticals from "@/components/Verticals";
 
 const packages = [
   {
@@ -64,7 +67,7 @@ export default function Home() {
       <section className="relative z-10 mx-auto max-w-6xl px-6 pt-16 pb-24 text-center">
         <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-panel/60 px-3 py-1 text-xs text-muted">
           <span className="h-1.5 w-1.5 rounded-full bg-accent2" />
-          Now in beta — 276 records across 12 cities
+          Every business on Google Maps — one search away
         </div>
         <h1 className="mx-auto max-w-3xl text-balance text-5xl font-bold tracking-tight text-white sm:text-6xl">
           Local business leads,{" "}
@@ -100,10 +103,10 @@ export default function Home() {
       <section className="relative z-10 border-y border-border bg-panel/30">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-6 py-8 md:grid-cols-4">
           {[
-            ["276", "records indexed"],
-            ["12+", "cities covered"],
-            ["$0.10", "per lead"],
-            ["90%", "margin — passed to you"],
+            ["US-wide", "anywhere Google Maps reaches"],
+            ["~2 sec", "search to result"],
+            ["$0.10", "per lead, all-in"],
+            ["3–5×", "cheaper than Apollo"],
           ].map(([n, l]) => (
             <div key={l} className="text-center">
               <div className="text-2xl font-bold text-white">{n}</div>
@@ -112,6 +115,12 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <BuiltOn />
+
+      <Stories />
+
+      <Verticals />
 
       <section className="relative z-10 mx-auto max-w-4xl px-6 py-24 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
