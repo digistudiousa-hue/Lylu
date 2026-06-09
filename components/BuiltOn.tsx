@@ -10,7 +10,7 @@ const stack = [
 export default function BuiltOn() {
   return (
     <section className="relative z-10 border-y border-border bg-panel/20">
-      <div className="mx-auto max-w-6xl px-6 py-10">
+      <div className="mx-auto max-w-6xl px-6 py-8 sm:py-10">
         <div className="text-center text-[11px] font-semibold uppercase tracking-widest text-muted">
           Built on infrastructure you already trust
         </div>

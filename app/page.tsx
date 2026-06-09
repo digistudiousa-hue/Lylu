@@ -72,7 +72,7 @@ export default function Home() {
       <Nav />
 
       {/* HERO — agency-targeted */}
-      <section className="relative z-10 mx-auto max-w-6xl px-6 pt-16 pb-24 text-center">
+      <section className="relative z-10 mx-auto max-w-6xl px-6 pt-10 pb-14 text-center sm:pt-16 sm:pb-24">
         <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-panel/60 px-3 py-1 text-xs text-muted">
           <span className="h-1.5 w-1.5 rounded-full bg-accent2" />
           Built for agencies &amp; outbound operators
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
         <p className="mt-3 text-xs text-muted">No credit card. Cancel anytime.</p>
 
-        <div className="mt-16">
+        <div className="mt-10 sm:mt-16">
           <DashboardMock />
         </div>
       </section>
@@ -127,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* PROBLEM */}
-      <section className="reveal relative z-10 mx-auto max-w-4xl px-6 py-24 text-center">
+      <section className="reveal relative z-10 mx-auto max-w-4xl px-6 py-14 sm:py-24 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
           The lead-gen stack is broken.
         </h2>
@@ -151,7 +151,7 @@ export default function Home() {
       </section>
 
       {/* SOLUTION / PRODUCT */}
-      <section id="product" className="reveal relative z-10 mx-auto max-w-6xl px-6 py-24">
+      <section id="product" className="reveal relative z-10 mx-auto max-w-6xl px-6 py-14 sm:py-24">
         <div className="text-center">
           <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
             Product
@@ -212,7 +212,7 @@ export default function Home() {
       <BuiltOn />
 
       {/* ROADMAP */}
-      <section id="roadmap" className="reveal relative z-10 mx-auto max-w-6xl px-6 py-24">
+      <section id="roadmap" className="reveal relative z-10 mx-auto max-w-6xl px-6 py-14 sm:py-24">
         <div className="text-center">
           <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
             Roadmap
@@ -226,7 +226,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-4 lg:grid-cols-4">
           {packages.map((p, i) => (
             <div
               key={p.name}
@@ -268,7 +268,7 @@ export default function Home() {
       </section>
 
       {/* PRICING */}
-      <section id="pricing" className="reveal relative z-10 mx-auto max-w-6xl px-6 py-24">
+      <section id="pricing" className="reveal relative z-10 mx-auto max-w-6xl px-6 py-14 sm:py-24">
         <div className="text-center">
           <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
             Pricing
@@ -286,7 +286,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="reveal relative z-10 mx-auto max-w-3xl px-6 py-24">
+      <section id="faq" className="reveal relative z-10 mx-auto max-w-3xl px-6 py-14 sm:py-24">
         <div className="text-center">
           <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
             FAQ
@@ -309,7 +309,7 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="reveal relative z-10 mx-auto max-w-4xl px-6 py-24">
+      <section className="reveal relative z-10 mx-auto max-w-4xl px-6 py-14 sm:py-24">
         <div className="rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/15 via-panel to-bg p-10 text-center glow">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Stop scraping. Start pitching.

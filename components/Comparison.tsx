@@ -17,7 +17,7 @@ const rows: {
 
 export default function Comparison() {
   return (
-    <section className="reveal relative z-10 mx-auto max-w-4xl px-6 py-24">
+    <section className="reveal relative z-10 mx-auto max-w-4xl px-6 py-14 sm:py-24">
       <div className="text-center">
         <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
           Why operators switch

@@ -39,7 +39,7 @@ const stories = [
 
 export default function Stories() {
   return (
-    <section className="relative z-10 mx-auto max-w-6xl px-6 py-24">
+    <section className="relative z-10 mx-auto max-w-6xl px-6 py-14 sm:py-24">
       <div className="text-center">
         <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
           Stories from the field
@@ -53,11 +53,11 @@ export default function Stories() {
         </p>
       </div>
 
-      <div className="mt-12 grid gap-5 md:grid-cols-3">
+      <div className="-mx-6 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 sm:mx-0 sm:mt-12 sm:grid sm:grid-cols-3 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0">
         {stories.map((s) => (
           <article
             key={s.headline}
-            className="flex flex-col rounded-2xl border border-border bg-panel/60 p-6"
+            className="flex min-w-[82%] snap-start flex-col rounded-2xl border border-border bg-panel/60 p-6 sm:min-w-0"
           >
             <div className="text-[11px] uppercase tracking-wider text-accent2">
               {s.tag}

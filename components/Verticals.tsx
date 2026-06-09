@@ -8,7 +8,7 @@ const verticals = [
 
 export default function Verticals() {
   return (
-    <section className="relative z-10 mx-auto max-w-6xl px-6 py-24">
+    <section className="relative z-10 mx-auto max-w-6xl px-6 py-14 sm:py-24">
       <div className="text-center">
         <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
           Coverage
@@ -25,11 +25,13 @@ export default function Verticals() {
         </p>
       </div>
 
-      <div className="mt-12 flex flex-wrap items-center justify-center gap-2">
-        {verticals.map((v) => (
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-12">
+        {verticals.map((v, i) => (
           <span
             key={v}
-            className="rounded-full border border-border bg-panel/60 px-3 py-1.5 text-sm text-white"
+            className={`rounded-full border border-border bg-panel/60 px-3 py-1.5 text-sm text-white ${
+              i >= 10 ? "hidden sm:inline-block" : ""
+            }`}
           >
             {v}
           </span>

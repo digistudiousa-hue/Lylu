@@ -120,7 +120,7 @@ export default function DashboardMock() {
         </div>
 
         {/* Filters */}
-        <div className="flex flex-wrap items-center gap-2 border-b border-border px-5 py-3 text-[10px] text-muted">
+        <div className="hidden flex-wrap items-center gap-2 border-b border-border px-5 py-3 text-[10px] text-muted sm:flex">
           {["Any rating", "Has Phone", "Has Social", "All industries", "All cities", "Top prospects"].map((f) => (
             <span key={f} className="rounded-full border border-border bg-panel px-2.5 py-1">
               {f}
@@ -129,9 +129,14 @@ export default function DashboardMock() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid gap-3 p-5 sm:grid-cols-2 lg:grid-cols-3">
-          {cards.map((c) => (
-            <div key={c.name} className="rounded-lg border border-border bg-bg/40 p-3">
+        <div className="grid gap-3 p-4 sm:grid-cols-2 sm:p-5 lg:grid-cols-3">
+          {cards.map((c, i) => (
+            <div
+              key={c.name}
+              className={`rounded-lg border border-border bg-bg/40 p-3 ${
+                i > 0 ? "hidden sm:block" : ""
+              }`}
+            >
               <div className="flex items-start gap-2">
                 <div className="grid h-9 w-9 place-items-center rounded-md bg-gradient-to-br from-accent to-accent2/70 text-xs font-bold text-white">
                   {c.logo}
