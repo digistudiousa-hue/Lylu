@@ -6,6 +6,7 @@ import Stories from "@/components/Stories";
 import BuiltOn from "@/components/BuiltOn";
 import Verticals from "@/components/Verticals";
 import Comparison from "@/components/Comparison";
+import LogoReel from "@/components/LogoReel";
 
 const packages = [
   {
@@ -173,6 +174,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* INTEGRATIONS — logo reel */}
+      <LogoReel />
 
       {/* DIFFERENTIATION */}
       <Comparison />
