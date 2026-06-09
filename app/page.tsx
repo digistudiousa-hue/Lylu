@@ -136,18 +136,6 @@ export default function Home() {
           Google Maps scrapers break every other week. You end up paying three tools
           and a VA to do what one clean search should solve.
         </p>
-        <div className="mt-10 grid gap-4 sm:grid-cols-3">
-          {[
-            { t: "Cheaper", d: "$0.10 per lead. 3–5× cheaper than Apollo." },
-            { t: "Faster", d: "Search → results in under 2 seconds." },
-            { t: "Cleaner", d: "Pre-filtered by rating, signals, and intent." },
-          ].map((c) => (
-            <div key={c.t} className="rounded-xl border border-border bg-panel/60 p-5 text-left">
-              <div className="text-white font-semibold">{c.t}</div>
-              <div className="mt-1 text-sm text-muted">{c.d}</div>
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* SOLUTION / PRODUCT */}
