@@ -7,6 +7,7 @@ import BuiltOn from "@/components/BuiltOn";
 import Verticals from "@/components/Verticals";
 import Comparison from "@/components/Comparison";
 import LogoReel from "@/components/LogoReel";
+import DemoSearch from "@/components/DemoSearch";
 
 const packages = [
   {
@@ -125,6 +126,23 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* TRY IT — demo / lead capture */}
+      <section className="reveal relative z-10 mx-auto max-w-6xl px-6 py-14 sm:py-20">
+        <div className="mb-8 text-center">
+          <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
+            Try it
+          </div>
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            What&apos;s your market?
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-muted">
+            Tell us the businesses you pitch and where. We&apos;ll have your first
+            50 leads ready the moment you sign up — free, no card.
+          </p>
+        </div>
+        <DemoSearch />
       </section>
 
       {/* PROBLEM */}
