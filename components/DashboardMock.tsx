@@ -82,7 +82,7 @@ export default function DashboardMock() {
         </div>
 
         {/* Package tabs */}
-        <div className="grid grid-cols-4 gap-3 border-b border-border bg-bg/40 px-5 py-4">
+        <div className="grid grid-cols-2 gap-3 border-b border-border bg-bg/40 px-4 py-4 sm:grid-cols-4 sm:px-5">
           {[
             { n: "Business Hub", d: "Company directory — ratings, phone & social", active: true },
             { n: "Decision Makers", d: "Key contacts with LinkedIn & email", soon: true },
@@ -107,14 +107,14 @@ export default function DashboardMock() {
         </div>
 
         {/* Search bar */}
-        <div className="grid grid-cols-12 gap-3 border-b border-border bg-bg/30 px-5 py-4">
-          <div className="col-span-5 rounded-lg border border-border bg-panel px-3 py-2 text-xs text-muted">
+        <div className="flex flex-col gap-3 border-b border-border bg-bg/30 px-4 py-4 sm:grid sm:grid-cols-12 sm:px-5">
+          <div className="rounded-lg border border-border bg-panel px-3 py-2 text-xs text-muted sm:col-span-5">
             Business type (e.g. plumbers, dentists)
           </div>
-          <div className="col-span-5 rounded-lg border border-border bg-panel px-3 py-2 text-xs text-muted">
+          <div className="rounded-lg border border-border bg-panel px-3 py-2 text-xs text-muted sm:col-span-5">
             Location (e.g. New York, NY)
           </div>
-          <button className="col-span-2 rounded-lg bg-accent px-3 py-2 text-xs font-medium text-white">
+          <button className="rounded-lg bg-accent px-3 py-2 text-xs font-medium text-white sm:col-span-2">
             Search
           </button>
         </div>

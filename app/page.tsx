@@ -251,9 +251,16 @@ export default function Home() {
               <div className="mt-3 text-white font-semibold">{p.name}</div>
               <div className="mt-1 text-sm text-muted">{p.desc}</div>
               {p.status !== "Live" && (
-                <button className="mt-4 w-full rounded-md border border-border bg-bg/40 py-1.5 text-xs text-white hover:border-accent">
+                <a
+                  href={`mailto:hello@aiworkspacelab.com?subject=${encodeURIComponent(
+                    `Waitlist — ${p.name}`
+                  )}&body=${encodeURIComponent(
+                    `I'd like early access to ${p.name} when it ships.`
+                  )}`}
+                  className="mt-4 block w-full rounded-md border border-border bg-bg/40 py-1.5 text-center text-xs text-white hover:border-accent"
+                >
                   Join waitlist
-                </button>
+                </a>
               )}
             </div>
           ))}
