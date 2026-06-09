@@ -36,8 +36,13 @@ export async function POST(req: NextRequest) {
   }
 
   let stored = false;
-  const url = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const rawUrl = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  // Sanitize: strip trailing slashes / accidental paths → bare https://xxx.supabase.co
+  const url = rawUrl
+    ?.trim()
+    .replace(/\/+$/, "")
+    .replace(/\/rest\/v1.*$/, "");
   if (url && key) {
     try {
       const supabase = createClient(url, key, {
