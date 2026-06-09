@@ -10,7 +10,7 @@ export default {
         border: "#1F1F2E",
         accent: "#8B5CF6",
         accent2: "#A78BFA",
-        muted: "#6B7280",
+        muted: "#9CA3AF",
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
