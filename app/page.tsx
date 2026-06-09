@@ -153,21 +153,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {[
-            { t: "Smart filters", d: "Rating, has-phone, has-social, industry, city, top prospects." },
-            { t: "Signal badges", d: "Instantly see which leads have a phone, address, or social profile." },
-            { t: "Export-ready", d: "CSV out, into Instantly, Smartlead, HubSpot, or your spreadsheet." },
-          ].map((f) => (
-            <div key={f.t} className="rounded-xl border border-border bg-panel/60 p-6">
-              <div className="text-white font-semibold">{f.t}</div>
-              <div className="mt-2 text-sm text-muted">{f.d}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* How it works — 3-step flow (replaces the empty placeholder) */}
-        <div id="how-it-works" className="mt-12 rounded-2xl border border-border bg-panel/40 p-8">
+        {/* How it works — 3-step flow */}
+        <div id="how-it-works" className="mt-10 rounded-2xl border border-border bg-panel/40 p-6 sm:mt-12 sm:p-8">
           <div className="grid gap-6 md:grid-cols-3">
             {steps.map((s, i) => (
               <div key={s.n} className="relative">
