@@ -35,6 +35,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  let stored = false;
   const url = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (url && key) {
@@ -51,6 +52,7 @@ export async function POST(req: NextRequest) {
         user_agent: req.headers.get("user-agent")?.slice(0, 300) || null,
       });
       if (error) console.error("demo-lead insert failed:", error.message);
+      else stored = true;
     } catch (e) {
       console.error("demo-lead store error:", e);
       // swallow — still route the visitor onward
@@ -63,5 +65,5 @@ export async function POST(req: NextRequest) {
     `&loc=${encodeURIComponent(location)}` +
     `&email=${encodeURIComponent(email)}`;
 
-  return NextResponse.json({ ok: true, handoff });
+  return NextResponse.json({ ok: true, stored, handoff });
 }
