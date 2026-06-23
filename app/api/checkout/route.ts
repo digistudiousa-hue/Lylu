@@ -1,9 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2026-05-27.dahlia",
-});
+// Lazy init: constructing Stripe at module load throws when STRIPE_SECRET_KEY
+// is absent, which fails the build on any environment without the secret.
+// Build it on first request instead so static pages deploy regardless.
+let _stripe: Stripe | null = null;
+function getStripe() {
+  if (!_stripe) {
+    _stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+      apiVersion: "2026-05-27.dahlia",
+    });
+  }
+  return _stripe;
+}
 
 const PRICE_MAP: Record<string, string | undefined> = {
   starter: process.env.STRIPE_PRICE_STARTER,
@@ -26,7 +35,7 @@ export async function POST(req: NextRequest) {
     const site = process.env.NEXT_PUBLIC_SITE_URL || "https://lylu.ai";
     const app = process.env.NEXT_PUBLIC_APP_URL || "https://saas-1-0.vercel.app";
 
-    const session = await stripe.checkout.sessions.create({
+    const session = await getStripe().checkout.sessions.create({
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],
       // After successful payment, route the user to the app's sign-up
