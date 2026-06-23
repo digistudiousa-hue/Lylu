@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SIGNUP_URL } from "@/lib/site";
 
 type Props = {
   plan: "starter" | "launch" | "pro" | "free";
@@ -16,10 +17,7 @@ export default function PricingButton({ plan, label, featured }: Props) {
     setError(null);
 
     if (plan === "free") {
-      window.location.href =
-        process.env.NEXT_PUBLIC_APP_URL
-          ? `${process.env.NEXT_PUBLIC_APP_URL}/sign-up`
-          : "https://app.aiworkspacelab.com/sign-up";
+      window.location.href = SIGNUP_URL;
       return;
     }
 

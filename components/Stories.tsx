@@ -1,39 +1,33 @@
-// Narrative case-study mini-stories. Framed as illustrative scenarios,
-// not invented quotes from invented people, so they stay FTC-compliant.
-
 const stories = [
   {
-    tag: "Lead-gen agency · Austin, TX",
-    headline: "From spreadsheet hell to 14 booked calls in week one.",
-    body:
-      "A 4-person outbound agency was running 3 clients on a stack of Apollo, a Clay account, and a $700/mo VA who scraped Google Maps by hand. They cut the stack, pulled 1,000 plumbers in Austin, Dallas, and Houston in under 10 minutes, and fed it straight into Smartlead. Result by Friday: 14 booked discovery calls.",
-    stats: [
-      ["~$650", "saved / mo"],
-      ["10 min", "to first export"],
-      ["14", "calls booked"],
+    tag: "Lead-gen agency",
+    headline: "One search per client, every Monday morning.",
+    steps: [
+      "Open Lylu and run one search per client — plumbers in Dallas, roofers in Phoenix, gyms in Chicago.",
+      "Filter to has-phone + 4.5★+ to drop the long tail before exporting.",
+      "Drop each CSV into its own Instantly workspace. Campaigns are live before 10am.",
     ],
+    why: "Replaces Apollo + Clay + a VA doing manual Google Maps research — three line items down to one.",
   },
   {
-    tag: "Local SEO shop · Brooklyn, NY",
-    headline: "Replaced their VA. Doubled their pipeline.",
-    body:
-      "A 2-person local SEO shop pitched dentists and law firms in Brooklyn and Queens. The bottleneck was research — finding ranked-but-thin sites with a phone they could call. With Lylu's 'has phone + 4.5★+' filter, they built a 280-lead list in one sitting and started cold-calling that afternoon. Pipeline value 30 days later: ~$22K MRR potential.",
-    stats: [
-      ["280", "verified leads"],
-      ["1 sitting", "vs. 2 weeks"],
-      ["~$22K", "pipeline added"],
+    tag: "Local SEO shop",
+    headline: "Find the businesses worth pitching — before you dial.",
+    steps: [
+      "Search a vertical and city: dentists in Brooklyn, law firms in Queens.",
+      "Filter on has-phone + minimum star rating — surfaces businesses that actively manage their presence.",
+      "Export to a calling list. Research that used to take days happens in one sitting.",
     ],
+    why: "The bottleneck in local SEO outreach is qualification. Lylu's filters do that work before you touch the phone.",
   },
   {
-    tag: "Fractional SDR · Miami, FL",
-    headline: "Three clients. One $97 plan. Zero seat math.",
-    body:
-      "A fractional SDR managing outbound for three SMB clients used to juggle three Apollo seats — $297/mo before campaigns. With Lylu Launch at $97, they pulled fresh local lists per client (medical, HVAC, agencies), exported each to its own Instantly workspace, and kept the difference as margin. Same outcome, two-thirds cheaper.",
-    stats: [
-      ["$200", "saved / mo"],
-      ["3", "clients, 1 tool"],
-      ["100%", "kept the margin"],
+    tag: "Fractional SDR",
+    headline: "Three clients. One plan. No seat math.",
+    steps: [
+      "Run a separate search per client — medical in Tampa, HVAC in Denver, agencies in LA.",
+      "Export each to its own sending workspace (Instantly, Smartlead, or a spreadsheet).",
+      "One Launch plan covers all three. No per-seat licenses, no per-client accounts.",
     ],
+    why: "Running outbound for multiple SMB clients used to mean multiple Apollo seats. Lylu doesn't charge per seat or per client.",
   },
 ];
 
@@ -42,14 +36,14 @@ export default function Stories() {
     <section className="relative z-10 mx-auto max-w-6xl px-6 py-14 sm:py-24">
       <div className="text-center">
         <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent2">
-          Stories from the field
+          How operators use Lylu
         </div>
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          What operators are doing with Lylu.
+          Three workflows. One tool.
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-muted">
-          Three patterns we see again and again — agencies cutting tool spend,
-          SEO shops replacing manual research, fractional SDRs scaling without seats.
+          Whether you run outbound for clients, pitch businesses for SEO, or manage
+          campaigns as a fractional SDR — the workflow is the same. Search, filter, export, pitch.
         </p>
       </div>
 
@@ -65,25 +59,22 @@ export default function Stories() {
             <h3 className="mt-3 text-lg font-semibold text-white">
               {s.headline}
             </h3>
-            <p className="mt-3 text-sm text-muted">{s.body}</p>
-
-            <div className="mt-6 grid grid-cols-3 gap-2 border-t border-border pt-4">
-              {s.stats.map(([n, l]) => (
-                <div key={l} className="text-center">
-                  <div className="text-base font-semibold text-white">{n}</div>
-                  <div className="text-[10px] uppercase tracking-wider text-muted">
-                    {l}
-                  </div>
-                </div>
+            <ol className="mt-4 space-y-2.5">
+              {s.steps.map((step, i) => (
+                <li key={i} className="flex gap-3 text-sm text-muted">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/15 text-[10px] font-bold text-accent2">
+                    {i + 1}
+                  </span>
+                  {step}
+                </li>
               ))}
-            </div>
+            </ol>
+            <p className="mt-5 border-t border-border pt-4 text-xs text-muted italic">
+              {s.why}
+            </p>
           </article>
         ))}
       </div>
-
-      <p className="mt-6 text-center text-[10px] text-muted">
-        Illustrative scenarios reflecting how Lylu is used by early operators. Specific outcomes vary.
-      </p>
     </section>
   );
 }

@@ -8,27 +8,33 @@ import Verticals from "@/components/Verticals";
 import Comparison from "@/components/Comparison";
 import LogoReel from "@/components/LogoReel";
 import DemoSearch from "@/components/DemoSearch";
+import AgencyMath from "@/components/AgencyMath";
+import { SIGNUP_URL } from "@/lib/site";
 
 const packages = [
   {
     name: "Business Hub",
     desc: "Company directory — ratings, address, phone & social.",
     status: "Live",
+    eta: "",
   },
   {
     name: "Decision Makers",
     desc: "Key contacts with LinkedIn, email & professional bio.",
     status: "Soon",
+    eta: "Q4 2026",
   },
   {
     name: "AI Sales Intelligence",
     desc: "AI-generated 5-step outreach sequences per contact.",
     status: "Soon",
+    eta: "Q4 2026",
   },
   {
     name: "Live Execution",
     desc: "Done-for-you outreach across 1,000+ prospect campaigns.",
     status: "Soon",
+    eta: "Q4 2026",
   },
 ];
 
@@ -82,7 +88,7 @@ export default function Home() {
         <h1 className="mx-auto max-w-4xl text-balance text-5xl font-bold tracking-tight text-white sm:text-6xl">
           Source local leads for every client,{" "}
           <span className="bg-gradient-to-r from-accent2 to-accent bg-clip-text text-transparent">
-            in seconds.
+            in minutes.
           </span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-pretty text-lg text-muted">
@@ -90,21 +96,32 @@ export default function Home() {
           phone, ratings, and socials included. Fill client pipelines without
           Apollo prices or a scraping VA.
         </p>
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
           <a
-            href="https://app.aiworkspacelab.com/sign-up"
+            href={SIGNUP_URL}
             className="rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/30 hover:bg-accent2"
           >
             Start free — 50 leads on us
           </a>
           <a
             href="#how-it-works"
-            className="rounded-lg border border-border bg-panel/60 px-5 py-3 text-sm font-semibold text-white hover:border-accent"
+            className="text-sm font-semibold text-muted hover:text-white"
           >
-            See how it works
+            See how it works →
           </a>
         </div>
         <p className="mt-3 text-xs text-muted">No credit card. Cancel anytime.</p>
+
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+          <span className="text-[10px] uppercase tracking-widest text-muted">
+            Built on
+          </span>
+          {["Stripe", "Clerk", "Supabase", "Vercel"].map((n) => (
+            <span key={n} className="text-sm font-semibold text-white/60">
+              {n}
+            </span>
+          ))}
+        </div>
 
         <div className="mt-10 sm:mt-16">
           <DashboardMock />
@@ -115,10 +132,10 @@ export default function Home() {
       <section className="relative z-10 border-y border-border bg-panel/30">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-6 py-8 md:grid-cols-4">
           {[
-            ["US-wide", "anywhere Google Maps reaches"],
-            ["~2 sec", "search to result"],
+            ["4 signals", "per lead, all included"],
             ["$0.10", "per lead, all-in"],
             ["3–5×", "cheaper than Apollo"],
+            ["US-wide", "any city, any vertical"],
           ].map(([n, l]) => (
             <div key={l} className="text-center">
               <div className="text-2xl font-bold text-white">{n}</div>
@@ -205,9 +222,6 @@ export default function Home() {
       {/* BREADTH — Verticals */}
       <Verticals />
 
-      {/* TRUST — Built on */}
-      <BuiltOn />
-
       {/* ROADMAP */}
       <section id="roadmap" className="reveal relative z-10 mx-auto max-w-6xl px-6 py-14 sm:py-24">
         <div className="text-center">
@@ -223,46 +237,64 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-4 lg:grid-cols-4">
-          {packages.map((p, i) => (
+        {/* Business Hub — primary, shipping now */}
+        {(() => {
+          const live = packages[0];
+          return (
+            <div className="mt-10 sm:mt-12 rounded-2xl border border-accent/60 bg-accent/5 p-6 sm:p-8 glow">
+              <div className="flex items-center gap-3">
+                <span className="rounded-full bg-accent px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white">
+                  Live now
+                </span>
+                <span className="text-xs font-mono text-muted">01</span>
+              </div>
+              <div className="mt-4 text-xl font-bold text-white sm:text-2xl">{live.name}</div>
+              <div className="mt-1 text-muted">{live.desc}</div>
+              <a
+                href={SIGNUP_URL}
+                className="mt-5 inline-block rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-accent/30 hover:bg-accent2"
+              >
+                Start free — 50 leads on us
+              </a>
+            </div>
+          );
+        })()}
+
+        {/* Coming soon — secondary row */}
+        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          {packages.slice(1).map((p, i) => (
             <div
               key={p.name}
-              className={`relative rounded-xl border p-5 ${
-                p.status === "Live"
-                  ? "border-accent/60 bg-accent/5"
-                  : "border-border bg-panel/60"
-              }`}
+              className="rounded-xl border border-border bg-panel/40 p-4"
             >
               <div className="flex items-center justify-between">
-                <div className="text-xs font-mono text-muted">0{i + 1}</div>
-                <span
-                  className={`rounded-full px-2 py-0.5 text-[10px] uppercase tracking-wider ${
-                    p.status === "Live"
-                      ? "bg-accent text-white"
-                      : "bg-border text-muted"
-                  }`}
-                >
-                  {p.status}
+                <span className="text-xs font-mono text-muted">0{i + 2}</span>
+                <span className="rounded-full border border-border px-2 py-0.5 text-[10px] uppercase tracking-wider text-muted">
+                  {p.eta}
                 </span>
               </div>
-              <div className="mt-3 text-white font-semibold">{p.name}</div>
-              <div className="mt-1 text-sm text-muted">{p.desc}</div>
-              {p.status !== "Live" && (
-                <a
-                  href={`mailto:hello@aiworkspacelab.com?subject=${encodeURIComponent(
-                    `Waitlist — ${p.name}`
-                  )}&body=${encodeURIComponent(
-                    `I'd like early access to ${p.name} when it ships.`
-                  )}`}
-                  className="mt-4 block w-full rounded-md border border-border bg-bg/40 py-1.5 text-center text-xs text-white hover:border-accent"
-                >
-                  Join waitlist
-                </a>
-              )}
+              <div className="mt-2 text-sm font-semibold text-white">{p.name}</div>
+              <div className="mt-1 text-xs text-muted">{p.desc}</div>
+              <a
+                href={`mailto:hello@lylu.ai?subject=${encodeURIComponent(
+                  `Waitlist — ${p.name}`
+                )}&body=${encodeURIComponent(
+                  `I'd like early access to ${p.name} when it ships.`
+                )}`}
+                className="mt-3 block w-full rounded-md border border-border bg-bg/40 py-1.5 text-center text-xs text-white hover:border-accent"
+              >
+                Join waitlist
+              </a>
             </div>
           ))}
         </div>
       </section>
+
+      {/* SAVINGS — agency math, right before the ask */}
+      <AgencyMath />
+
+      {/* TRUST — Built on, priming the price */}
+      <BuiltOn />
 
       {/* PRICING */}
       <section id="pricing" className="reveal relative z-10 mx-auto max-w-6xl px-6 py-14 sm:py-24">
@@ -274,7 +306,7 @@ export default function Home() {
             Pay per lead. No seats. No surprises.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted">
-            One credit = $0.01. One lead = 10 credits. Cancel anytime.
+            One credit = $0.01. One lead = 10 credits. No seats, no contracts.
           </p>
         </div>
         <div className="mt-12">
@@ -315,7 +347,7 @@ export default function Home() {
             50 free leads, no card. Pull your first client list in the next 5 minutes.
           </p>
           <a
-            href="https://app.aiworkspacelab.com/sign-up"
+            href={SIGNUP_URL}
             className="mt-7 inline-block rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/30 hover:bg-accent2"
           >
             Start free

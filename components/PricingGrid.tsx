@@ -7,13 +7,14 @@ const plans: {
   name: string;
   price: string;
   leads: string;
+  perLead: string;
   cta: string;
   featured: boolean;
 }[] = [
-  { key: "free", name: "Free trial", price: "$0", leads: "50 leads", cta: "Start free", featured: false },
-  { key: "starter", name: "Starter", price: "$35", leads: "350 leads / mo", cta: "Get Starter", featured: false },
-  { key: "launch", name: "Launch", price: "$97", leads: "1,000 leads / mo", cta: "Get Launch", featured: true },
-  { key: "pro", name: "Pro", price: "$247", leads: "2,500 leads / mo", cta: "Get Pro", featured: false },
+  { key: "free", name: "Free trial", price: "$0", leads: "50 leads", perLead: "On us", cta: "Start free", featured: false },
+  { key: "starter", name: "Starter", price: "$35", leads: "350 leads / mo", perLead: "$0.10 / lead", cta: "Get Starter", featured: false },
+  { key: "launch", name: "Launch", price: "$97", leads: "1,000 leads / mo", perLead: "$0.097 / lead", cta: "Get Launch", featured: true },
+  { key: "pro", name: "Pro", price: "$247", leads: "2,500 leads / mo", perLead: "$0.099 / lead", cta: "Get Pro", featured: false },
 ];
 
 export default function PricingGrid() {
@@ -39,6 +40,7 @@ export default function PricingGrid() {
             {p.price !== "$0" && <span className="text-sm text-muted">/mo</span>}
           </div>
           <div className="mt-1 text-sm text-accent2">{p.leads}</div>
+          <div className="text-xs text-muted">{p.perLead}</div>
           <ul className="mt-5 space-y-2 text-sm text-muted">
             <li>✓ Full Business Hub access</li>
             <li>✓ All filters & signals</li>

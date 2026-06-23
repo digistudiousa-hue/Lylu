@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://aiworkspacelab.com/sitemap.xml",
-    host: "https://aiworkspacelab.com",
+    sitemap: "https://lylu.ai/sitemap.xml",
+    host: "https://lylu.ai",
   };
 }

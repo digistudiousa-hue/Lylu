@@ -50,7 +50,7 @@ export default function NotFound() {
         </div>
         <p className="mt-12 text-xs text-muted">
           Found a broken link?{" "}
-          <a className="text-accent2 hover:text-white" href="mailto:hello@aiworkspacelab.com">
+          <a className="text-accent2 hover:text-white" href="mailto:hello@lylu.ai">
             Tell us
           </a>
           .

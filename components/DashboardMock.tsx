@@ -63,7 +63,7 @@ export default function DashboardMock() {
             <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/70" />
             <span className="h-2.5 w-2.5 rounded-full bg-green-500/70" />
           </div>
-          <div className="mx-auto text-xs text-muted">app.aiworkspacelab.com/dashboard/leads</div>
+          <div className="mx-auto text-xs text-muted">app.lylu.ai/dashboard/leads</div>
         </div>
 
         {/* Top bar */}

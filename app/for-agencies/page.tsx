@@ -1,6 +1,8 @@
 import PageShell from "@/components/PageShell";
 import PricingGrid from "@/components/PricingGrid";
 import DashboardMock from "@/components/DashboardMock";
+import AgencyMath from "@/components/AgencyMath";
+import { SIGNUP_URL } from "@/lib/site";
 
 export const metadata = {
   title: "Lylu for Agencies — Local leads at agency scale",
@@ -20,7 +22,7 @@ export default function ForAgenciesPage() {
           <span className="bg-gradient-to-r from-accent2 to-accent bg-clip-text text-transparent">
             every client
           </span>{" "}
-          — for less than a coffee.
+          — for 10 cents apiece.
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-lg text-muted">
           1,000 fresh, filtered local business leads for $97. Per client, per month.
@@ -28,7 +30,7 @@ export default function ForAgenciesPage() {
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            href="https://app.aiworkspacelab.com/sign-up"
+            href={SIGNUP_URL}
             className="rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/30 hover:bg-accent2"
           >
             Start free — 50 leads on us
@@ -80,36 +82,7 @@ export default function ForAgenciesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16">
-        <h2 className="text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          The agency math.
-        </h2>
-        <p className="mt-3 text-center text-muted">
-          You run cold outbound for 3 SMB clients at $1,500/mo each.
-          Here&apos;s what Lylu costs vs. what it replaces.
-        </p>
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
-          <div className="rounded-2xl border border-border bg-panel/60 p-6">
-            <div className="text-sm uppercase tracking-wider text-muted">Before</div>
-            <ul className="mt-3 space-y-2 text-sm text-muted">
-              <li>Apollo seat — <span className="text-white">$99/mo</span></li>
-              <li>Clay credits — <span className="text-white">$149/mo</span></li>
-              <li>VA scraping Google Maps — <span className="text-white">$300/mo</span></li>
-              <li className="border-t border-border pt-2">Total — <span className="text-white font-semibold">$548/mo</span></li>
-            </ul>
-          </div>
-          <div className="rounded-2xl border border-accent bg-gradient-to-b from-accent/10 to-transparent p-6 glow">
-            <div className="text-sm uppercase tracking-wider text-accent2">With Lylu</div>
-            <ul className="mt-3 space-y-2 text-sm text-muted">
-              <li>Lylu Launch plan — <span className="text-white">$97/mo</span></li>
-              <li>1,000 fresh leads/mo</li>
-              <li>~333 leads per client/mo</li>
-              <li className="border-t border-border pt-2">Total — <span className="text-white font-semibold">$97/mo</span></li>
-              <li className="text-accent2">Save $451/mo. Per agency, not per client.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <AgencyMath />
 
       <section className="mx-auto max-w-6xl px-6 py-24">
         <h2 className="text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -132,7 +105,7 @@ export default function ForAgenciesPage() {
             Pull your first 50 leads in the next 5 minutes. No card.
           </p>
           <a
-            href="https://app.aiworkspacelab.com/sign-up"
+            href={SIGNUP_URL}
             className="mt-7 inline-block rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/30 hover:bg-accent2"
           >
             Try Lylu free

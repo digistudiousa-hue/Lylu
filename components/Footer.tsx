@@ -13,7 +13,7 @@ export default function Footer() {
           <Link href="/about" className="hover:text-white">About</Link>
           <Link href="/privacy" className="hover:text-white">Privacy</Link>
           <Link href="/terms" className="hover:text-white">Terms</Link>
-          <a href="mailto:hello@aiworkspacelab.com" className="hover:text-white">Contact</a>
+          <a href="mailto:hello@lylu.ai" className="hover:text-white">Contact</a>
         </div>
       </div>
     </footer>

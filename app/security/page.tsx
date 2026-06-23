@@ -29,7 +29,7 @@ const items = [
   },
   {
     t: "Vulnerability handling",
-    d: "Found a security issue? Email security@aiworkspacelab.com and we'll respond within 48 hours. We do not retaliate against good-faith reporters.",
+    d: "Found a security issue? Email security@lylu.ai and we'll respond within 48 hours. We do not retaliate against good-faith reporters.",
   },
   {
     t: "Compliance posture",
@@ -72,8 +72,8 @@ export default function SecurityPage() {
           </h2>
           <p className="mt-2 text-muted">
             We answer them. Send yours to{" "}
-            <a className="text-accent2 hover:text-white" href="mailto:security@aiworkspacelab.com">
-              security@aiworkspacelab.com
+            <a className="text-accent2 hover:text-white" href="mailto:security@lylu.ai">
+              security@lylu.ai
             </a>{" "}
             and we&apos;ll turn it around within 3 business days.
           </p>

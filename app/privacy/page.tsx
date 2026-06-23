@@ -19,8 +19,8 @@ export default function PrivacyPage() {
         This Privacy Policy explains how Lylu (&quot;Lylu,&quot; &quot;we,&quot;
         &quot;our,&quot; or &quot;us&quot;) collects, uses, and protects your
         information when you visit{" "}
-        <a className="text-accent2" href="https://aiworkspacelab.com">
-          aiworkspacelab.com
+        <a className="text-accent2" href="https://lylu.ai">
+          lylu.ai
         </a>{" "}
         or use our service (the &quot;Service&quot;). By using the Service you
         agree to the practices described here.
@@ -75,8 +75,8 @@ export default function PrivacyPage() {
         listings, and public-facing social profiles. We do not knowingly sell
         sensitive personal information. If you are a business owner and wish to
         have your record corrected or removed, contact{" "}
-        <a className="text-accent2" href="mailto:hello@aiworkspacelab.com">
-          hello@aiworkspacelab.com
+        <a className="text-accent2" href="mailto:hello@lylu.ai">
+          hello@lylu.ai
         </a>{" "}
         and we will respond within 30 days.
       </P>
@@ -120,8 +120,8 @@ export default function PrivacyPage() {
         California under CCPA), you may have the right to access, correct,
         delete, or port your personal data, and to object to certain
         processing. To exercise these rights, email{" "}
-        <a className="text-accent2" href="mailto:hello@aiworkspacelab.com">
-          hello@aiworkspacelab.com
+        <a className="text-accent2" href="mailto:hello@lylu.ai">
+          hello@lylu.ai
         </a>
         . We will respond within 30 days.
       </P>
@@ -157,8 +157,8 @@ export default function PrivacyPage() {
       <H2>11. Contact</H2>
       <P>
         For any privacy-related question or request, contact us at{" "}
-        <a className="text-accent2" href="mailto:hello@aiworkspacelab.com">
-          hello@aiworkspacelab.com
+        <a className="text-accent2" href="mailto:hello@lylu.ai">
+          hello@lylu.ai
         </a>
         .
       </P>

@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const site = process.env.NEXT_PUBLIC_SITE_URL || "https://aiworkspacelab.com";
+    const site = process.env.NEXT_PUBLIC_SITE_URL || "https://lylu.ai";
     const app = process.env.NEXT_PUBLIC_APP_URL || "https://saas-1-0.vercel.app";
 
     const session = await stripe.checkout.sessions.create({

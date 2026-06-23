@@ -73,8 +73,8 @@ export default function TermsPage() {
         Subscription fees are non-refundable except where required by law or at
         our sole discretion. If you believe you were charged in error, contact
         us within 14 days at{" "}
-        <a className="text-accent2" href="mailto:hello@aiworkspacelab.com">
-          hello@aiworkspacelab.com
+        <a className="text-accent2" href="mailto:hello@lylu.ai">
+          hello@lylu.ai
         </a>{" "}
         and we will review the request in good faith.
       </P>
@@ -194,8 +194,8 @@ export default function TermsPage() {
       <H2>15. Contact</H2>
       <P>
         Questions about these Terms? Email{" "}
-        <a className="text-accent2" href="mailto:hello@aiworkspacelab.com">
-          hello@aiworkspacelab.com
+        <a className="text-accent2" href="mailto:hello@lylu.ai">
+          hello@lylu.ai
         </a>
         .
       </P>

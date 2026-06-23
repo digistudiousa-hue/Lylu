@@ -1,4 +1,5 @@
 import PageShell from "@/components/PageShell";
+import { SIGNUP_URL } from "@/lib/site";
 
 export const metadata = { title: "About — Lylu" };
 
@@ -49,8 +50,8 @@ export default function AboutPage() {
             <div className="text-white font-semibold">How to reach us</div>
             <p className="mt-2 text-sm text-muted">
               Real humans read every email.{" "}
-              <a className="text-accent2 hover:text-white" href="mailto:hello@aiworkspacelab.com">
-                hello@aiworkspacelab.com
+              <a className="text-accent2 hover:text-white" href="mailto:hello@lylu.ai">
+                hello@lylu.ai
               </a>
             </p>
           </div>
@@ -59,7 +60,7 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-3xl px-6 py-16 text-center">
         <a
-          href="https://app.aiworkspacelab.com/sign-up"
+          href={SIGNUP_URL}
           className="inline-block rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/30 hover:bg-accent2"
         >
           Try Lylu free

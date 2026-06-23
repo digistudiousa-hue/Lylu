@@ -1,5 +1,7 @@
 // "Built on" trust strip — establishes credibility via infrastructure choices.
 
+import Link from "next/link";
+
 const stack = [
   { n: "Stripe", d: "Payments" },
   { n: "Clerk", d: "Auth" },
@@ -26,6 +28,14 @@ export default function BuiltOn() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="mt-5 text-center">
+          <Link
+            href="/security"
+            className="text-xs font-medium text-accent2 hover:text-white"
+          >
+            See how we secure your data →
+          </Link>
         </div>
       </div>
     </section>

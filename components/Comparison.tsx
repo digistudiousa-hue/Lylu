@@ -60,7 +60,7 @@ export default function Comparison() {
         ))}
       </div>
       <p className="mt-3 text-center text-[10px] text-muted">
-        Competitor pricing reflects publicly listed plans as of mid-2026; subject to change.
+        Competitor pricing reflects publicly listed plans as of 2026; subject to change.
       </p>
     </section>
   );

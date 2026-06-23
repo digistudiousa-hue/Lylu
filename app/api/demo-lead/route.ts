@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { SIGNUP_URL } from "@/lib/site";
 
 // Same-origin endpoint for the demo widget. Captures the lead straight into
 // Supabase (service role, server-only), then returns the personalized sign-up
@@ -9,7 +10,6 @@ import { createClient } from "@supabase/supabase-js";
 export const runtime = "nodejs";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.aiworkspacelab.com";
 
 export async function POST(req: NextRequest) {
   let body: { email?: string; keyword?: string; location?: string; website?: string };
@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
 
   // Honeypot: real users never fill the hidden "website" field.
   if (body.website) {
-    return NextResponse.json({ ok: true, handoff: `${APP_URL}/sign-up` });
+    return NextResponse.json({ ok: true, handoff: SIGNUP_URL });
   }
 
   const email = String(body.email ?? "").trim().toLowerCase();
@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
   }
 
   const handoff =
-    `${APP_URL}/sign-up` +
+    `${SIGNUP_URL}` +
     `?q=${encodeURIComponent(keyword)}` +
     `&loc=${encodeURIComponent(location)}` +
     `&email=${encodeURIComponent(email)}`;

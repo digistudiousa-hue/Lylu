@@ -36,8 +36,8 @@ export default function LegalLayout({
 
         <footer className="mt-16 border-t border-border pt-8 text-xs text-muted">
           Questions?{" "}
-          <a className="text-accent2 hover:text-white" href="mailto:hello@aiworkspacelab.com">
-            hello@aiworkspacelab.com
+          <a className="text-accent2 hover:text-white" href="mailto:hello@lylu.ai">
+            hello@lylu.ai
           </a>
         </footer>
       </article>
