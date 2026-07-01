@@ -3,7 +3,7 @@
 
 export const ogSize = { width: 1200, height: 630 };
 export const ogAlt =
-  "Lylu — Source local leads for every client, in seconds.";
+  "Lylu — Source local leads for every client, in minutes.";
 
 export function OgTemplate() {
   return (
@@ -59,7 +59,7 @@ export function OgTemplate() {
           }}
         >
           Source local leads for every client,&nbsp;
-          <span style={{ display: "flex", color: "#A78BFA" }}>in seconds.</span>
+          <span style={{ display: "flex", color: "#A78BFA" }}>in minutes.</span>
         </div>
         <div
           style={{

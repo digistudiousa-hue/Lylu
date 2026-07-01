@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         This Privacy Policy explains how Digital Studio USA LLC (&quot;Lylu,&quot;
         &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) collects, uses, and protects your
         information when you visit{" "}
-        <a className="text-accent2" href="https://lylu.ai">
+        <a className="text-accent2" href="https://www.lylu.ai">
           lylu.ai
         </a>{" "}
         or use our service (the &quot;Service&quot;). By using the Service you

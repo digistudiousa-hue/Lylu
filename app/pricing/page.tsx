@@ -12,7 +12,7 @@ const faqs = [
   { q: "Do credits roll over?", a: "Monthly plan credits reset each cycle. Top-up credits never expire." },
   { q: "Can I cancel anytime?", a: "Yes. One click in your dashboard. No retention call." },
   { q: "Is there a free trial?", a: "Yes — 50 free leads, no credit card." },
-  { q: "Do you have an annual plan?", a: "Not yet. Monthly only while we&apos;re in beta." },
+  { q: "Do you have an annual plan?", a: "Not yet. Monthly only while we're in beta." },
   { q: "What about team seats?", a: "All paid plans include unlimited seats inside one workspace. Multi-workspace coming soon." },
 ];
 

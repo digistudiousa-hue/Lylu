@@ -32,8 +32,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const site = process.env.NEXT_PUBLIC_SITE_URL || "https://lylu.ai";
-    const app = process.env.NEXT_PUBLIC_APP_URL || "https://saas-1-0.vercel.app";
+    const site = process.env.NEXT_PUBLIC_SITE_URL || "https://www.lylu.ai";
+    const app = process.env.NEXT_PUBLIC_APP_URL || "https://app.lylu.ai";
 
     const session = await getStripe().checkout.sessions.create({
       mode: "subscription",

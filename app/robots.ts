@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://lylu.ai/sitemap.xml",
-    host: "https://lylu.ai",
+    sitemap: "https://www.lylu.ai/sitemap.xml",
+    host: "https://www.lylu.ai",
   };
 }

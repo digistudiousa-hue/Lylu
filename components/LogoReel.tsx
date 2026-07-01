@@ -10,7 +10,6 @@ const tools = [
   "Lemlist",
   "Pipedrive",
   "Close",
-  "Clay",
   "Zapier",
 ];
 
@@ -37,7 +36,7 @@ export default function LogoReel() {
     <section className="relative z-10 border-y border-border bg-panel/20 py-10">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center text-[11px] font-semibold uppercase tracking-widest text-muted">
-          Exports into the tools you already run
+          CSV export — ready for the tools you already run
         </div>
       </div>
 
