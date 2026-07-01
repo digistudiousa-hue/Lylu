@@ -22,7 +22,7 @@ export default function ForAgenciesPage() {
           <span className="bg-gradient-to-r from-accent2 to-accent bg-clip-text text-transparent">
             every client
           </span>{" "}
-          — for 10 cents apiece.
+          — from under 10 cents a lead.
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-lg text-muted">
           1,000 fresh, filtered local business leads for $97. Per client, per month.
