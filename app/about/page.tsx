@@ -50,8 +50,8 @@ export default function AboutPage() {
             <div className="text-white font-semibold">How to reach us</div>
             <p className="mt-2 text-sm text-muted">
               Real humans read every email.{" "}
-              <a className="text-accent2 hover:text-white" href="mailto:hello@lylu.ai">
-                hello@lylu.ai
+              <a className="text-accent2 hover:text-white" href="mailto:support@lylu.ai">
+                support@lylu.ai
               </a>
             </p>
           </div>

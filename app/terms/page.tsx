@@ -17,8 +17,8 @@ export default function TermsPage() {
     <LegalLayout title="Terms of Service" updated="June 7, 2026">
       <P>
         These Terms of Service (&quot;Terms&quot;) govern your access to and use
-        of Lylu (the &quot;Service&quot;), operated by Lylu (&quot;Lylu,&quot;
-        &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). By creating an
+        of Lylu (the &quot;Service&quot;), operated by Digital Studio USA LLC
+        (&quot;Lylu,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). By creating an
         account or using the Service, you agree to these Terms. If you do not
         agree, do not use the Service.
       </P>
@@ -73,8 +73,8 @@ export default function TermsPage() {
         Subscription fees are non-refundable except where required by law or at
         our sole discretion. If you believe you were charged in error, contact
         us within 14 days at{" "}
-        <a className="text-accent2" href="mailto:hello@lylu.ai">
-          hello@lylu.ai
+        <a className="text-accent2" href="mailto:support@lylu.ai">
+          support@lylu.ai
         </a>{" "}
         and we will review the request in good faith.
       </P>
@@ -194,8 +194,8 @@ export default function TermsPage() {
       <H2>15. Contact</H2>
       <P>
         Questions about these Terms? Email{" "}
-        <a className="text-accent2" href="mailto:hello@lylu.ai">
-          hello@lylu.ai
+        <a className="text-accent2" href="mailto:support@lylu.ai">
+          support@lylu.ai
         </a>
         .
       </P>
